@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * This class extends from BankAccount, provides to a client a loan.
  * 
- * @author Rares Neamtu.
+ * @author Rares
  *
  */
 public class LoanAccount extends BankAccount {
