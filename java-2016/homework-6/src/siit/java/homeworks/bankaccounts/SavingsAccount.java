@@ -16,6 +16,7 @@ public class SavingsAccount extends BankAccount {
 	private float withdrawCommision;
 	private float interest;
 
+	// TODO CODE REVIEW: The 3rd param, withdrawalCommision is never used.
 	/**
 	 * This is the constructor.
 	 * 
