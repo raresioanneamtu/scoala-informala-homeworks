@@ -10,7 +10,7 @@ public class RunningAccountTest {
 
 	// TODO CODE REVIEW: Methods don't start with capital letters in Java.
 	@Test
-	public void RunningAccountTestWithSalary() {
+	public void runningAccountTestWithSalary() {
 		// given
 		float balance = 0;
 		float monthlyFee = 10f;
