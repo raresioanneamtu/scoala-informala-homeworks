@@ -1,0 +1,47 @@
+package siit.java.homeworks.parkingspace;
+
+import java.util.Comparator;
+
+public class Employee implements Comparable<Employee> {
+	private String name;
+	private String position;
+	private int seniority;
+	private boolean parking;
+
+	public Employee(String name, String position, int seniority, boolean parking) {
+		this.name = name;
+		this.position = position;
+		this.seniority = seniority;
+		this.parking = parking;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public int getSeniority() {
+		return seniority;
+	}
+
+	public boolean isParking() {
+		return parking;
+	}
+	
+	public static Comparator<Employee> Seniority = new Comparator<Employee>(){
+
+		@Override
+		public int compare(Employee o1, Employee o2) {
+			return o2.seniority - o2.seniority;
+		}
+		
+	};
+
+	@Override
+	public int compareTo(Employee o) {
+		return (this.name).compareTo(o.name);
+	}
+}

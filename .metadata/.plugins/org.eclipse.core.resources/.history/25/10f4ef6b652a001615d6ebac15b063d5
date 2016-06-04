@@ -1,0 +1,55 @@
+package siit.java.homeworks.parkingspace;
+
+import java.awt.List;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class CompanyManagementSystem {
+
+	private List<Employee> employeeList = new ArrayList<Employee>();
+	private List<Employee> managerList = new ArrayList<Employee>();
+	private List<Employee> juniorList = new ArrayList<Employee>();
+	private List<Employee> employeeListWithNoParking = new ArrayList<Employee>();
+	private List<Employee> employeeListWithParking = new ArrayList<Employee>();
+	
+	public void add(Employee employe) {
+		
+		if employeeList.add(employee);
+		
+		else
+			
+	}
+	
+
+	public void printAllEmployees() {
+		System.out.print("Employee's list: ");
+		for (Employee employee : employeeList)
+			System.out.print(employee.getName());
+	}
+
+	public void printJuniors() {
+		System.out.print("Juniors list: ");
+		for (Employee employee : juniorList)
+			System.out.print(employee.getName());
+	}
+
+	public void printManager() {
+		System.out.print("Managers list: ");
+		for (Employee employee : managerList)
+			System.out.print(employee.getName());
+	}
+
+	public void printEmployeesWithParking() {
+		System.out.print("Employee's with parking: ");
+		for (Employee employee : employeeListWithParking)
+			System.out.print(employee.getName());
+	}
+	
+	public void printEmployeesWithNoParking() {
+		System.out.println("Employee's with no parking: ");
+		Collections.sort(employeeListWithNoParking, Employee.Seniority);
+		for (Employee employee : employeeListWithNoParking)
+			System.out.println(employee.getName() + ", years in company: " + employee.getSeniority());
+
+	
+}

@@ -1,0 +1,45 @@
+package siit.java.homeworks.shape;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShapeTool {
+
+	private List<Shape> shapeList = new ArrayList<>();
+
+	public void addShape(Shape s) throws IllegalArgumentException {
+		if (shapeList.contains(s)) {
+			throw new IllegalArgumentException("Argument alredy in the list");
+		}
+		shapeList.add(s);
+	}
+
+	public final double calculateTotalSurface() throws NullPointerException {
+		if (shapeList.isEmpty()) {
+			throw new NullPointerException("No shapes added nothing to calculate");
+		}
+		double totalArea = 0;
+		for (Shape s : shapeList) {
+			totalArea += s.calculateArea();
+		}
+		return totalArea;
+	}
+
+	public final float calculateTotalPerimeter() throws NullPointerException {
+		if (shapeList.isEmpty()) {
+			throw new NullPointerException("Nothing to calculate!");
+		}
+		float totalPerimeter = 0;
+		for (Shape s : shapeList) {
+			totalPerimeter += s.calculatePerimeter();
+		}
+		return totalPerimeter;
+	}
+
+	/**
+	 * @return An ArrayList with all the shapes stored inside
+	 */
+	public final List<Shape> getShapeList() {
+		return new ArrayList<Shape>(shapeList);
+	}
+}

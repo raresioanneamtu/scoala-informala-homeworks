@@ -1,0 +1,80 @@
+package siit.java.homeworks.shape;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * This class is the main class. Here we have the results of the areas and of
+ * the perimeters for all the shapes.
+ * 
+ * @author Rares
+ *
+ */
+
+public class Client {
+
+	public static void main(String[] args) {
+
+		Shape c = new Circle(1);
+		((Circle) c).setRadius(10);
+		/**
+		 * Prints the area and perimeter for circle.
+		 */
+		System.out.println("Circle area is: " + c.calculateArea());
+		System.out.println("Circle perimeter is: " + c.calculatePerimeter());
+
+		Triangle t = new Triangle();
+		((Triangle) t).setA(3);
+		((Triangle) t).setB(4);
+		((Triangle) t).setC(5);
+		/**
+		 * Prints the area and perimeter for triangle.
+		 */
+		System.out.println("Triangle area is: " + t.calculateArea());
+		System.out.println("Triangle perimeter is: " + t.calculatePerimeter());
+
+		Shape r = new Rectangle();
+		((RectangleSquare) r).setLength(13);
+		((RectangleSquare) r).setWidth(3);
+		/**
+		 * Prints the area and perimeter for rectangle.
+		 */
+		System.out.println("Rectangle area is: " + r.calculateArea());
+		System.out.println("Rectangle perimeter is: " + r.calculatePerimeter());
+
+		Shape s = new Square();
+		((RectangleSquare) s).setLength(5);
+		((RectangleSquare) s).setWidth(5);
+		/**
+		 * Prints the area and perimeter for square.
+		 */
+		System.out.println("Square area is: " + s.calculateArea());
+		System.out.println("Square perimeter is: " + s.calculatePerimeter());
+	}
+
+	double totalPerimeter = 0;
+	double totalArea = 0;
+
+	List<Shape> shapeList = new ArrayList<Shape>();
+
+	boolean doubleShape = false; {
+
+	for (int i = 0; i < shapeList.size() - 1; i++) {
+		if (shapeList.get(i).calculateArea() == shapeList.get(i + 1).calculateArea()) {
+			doubleShape = true;
+		}
+	}
+
+	if (doubleShape == false) {
+		for (int j = 0; j < shapeList.size(); j++) {
+			totalArea += shapeList.get(j).calculateArea();
+		}
+		System.out.println(totalArea);
+
+		for (int k = 0; k < shapeList.size(); k++) {
+			totalPerimeter += shapeList.get(k).calculatePerimeter();
+		}
+		System.out.println(totalPerimeter);
+		}
+	}
+}

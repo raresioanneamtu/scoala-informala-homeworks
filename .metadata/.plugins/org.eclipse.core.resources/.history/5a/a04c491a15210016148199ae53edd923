@@ -1,0 +1,92 @@
+package siit.java.homeworks.shape;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * This class is the main class. Here we have the results of the areas and of
+ * the perimeters for all the shapes.
+ * 
+ * @author Rares
+ *
+ */
+
+public class Client {
+
+	public static void main(String[] args) {
+
+		Shape c = new Circle(1);
+		((Circle) c).setRadius(10);
+		/**
+		 * Prints the area and perimeter for circle.
+		 */
+		System.out.println("Circle area is: " + c.calculateArea());
+		System.out.println("Circle perimeter is: " + c.calculatePerimeter());
+
+		Triangle t = new Triangle();
+		((Triangle) t).setA(3);
+		((Triangle) t).setB(4);
+		((Triangle) t).setC(5);
+		/**
+		 * Prints the area and perimeter for triangle.
+		 */
+		System.out.println("Triangle area is: " + t.calculateArea());
+		System.out.println("Triangle perimeter is: " + t.calculatePerimeter());
+
+		Shape r = new Rectangle();
+		((RectangleSquare) r).setLength(13);
+		((RectangleSquare) r).setWidth(3);
+		/**
+		 * Prints the area and perimeter for rectangle.
+		 */
+		System.out.println("Rectangle area is: " + r.calculateArea());
+		System.out.println("Rectangle perimeter is: " + r.calculatePerimeter());
+
+		Shape s = new Square();
+		((RectangleSquare) s).setLength(5);
+		((RectangleSquare) s).setWidth(5);
+		/**
+		 * Prints the area and perimeter for square.
+		 */
+		System.out.println("Square area is: " + s.calculateArea());
+		System.out.println("Square perimeter is: " + s.calculatePerimeter());
+	}
+
+	private List<Shape> shapeList = new ArrayList<>();
+
+	public void addShape(Shape s) throws IllegalArgumentException {
+		if (shapeList.contains(s)) {
+			throw new IllegalArgumentException("Argument alredy in the list");
+		}
+		shapeList.add(s);
+	}
+
+	public final double calculateTotalSurface() throws NullPointerException {
+		if (shapeList.isEmpty()) {
+			throw new NullPointerException("No shapes added nothing to calculate");
+		}
+		double totalArea = 0;
+		for (Shape s : shapeList) {
+			totalArea += s.calculateArea();
+		}
+		return totalArea;
+	}
+
+	public final double calculateTotalPerimeter() throws NullPointerException {
+		if (shapeList.isEmpty()) {
+			throw new NullPointerException("Nothing to calculate!");
+		}
+		double totalPerimeter = 0;
+		for (Shape s : shapeList) {
+			totalPerimeter += s.calculatePerimeter();
+		}
+		return totalPerimeter;
+	}
+
+	/**
+	 * @return An ArrayList with all the shapes stored inside
+	 */
+	public final List<Shape> getShapeList() {
+		return new ArrayList<Shape>(shapeList);
+	}
+}

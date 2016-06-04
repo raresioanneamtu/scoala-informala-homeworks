@@ -39,7 +39,7 @@ public abstract class BankAccount {
 	}
 
 	/**
-	 * This method throws an exeption if there are insufficient funds.
+	 * This method throws an exception if there are insufficient funds.
 	 * 
 	 * @param amount
 	 * @throws InsufficientFundsException

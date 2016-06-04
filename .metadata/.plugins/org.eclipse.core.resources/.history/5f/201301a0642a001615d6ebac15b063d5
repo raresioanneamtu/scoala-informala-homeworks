@@ -1,0 +1,19 @@
+package siit.java.homeworks.parkingspace;
+
+import java.awt.List;
+import java.util.ArrayList;
+
+public class CompanyManagementSystem {
+	
+	private List<Employee> employeeList = new ArrayList<Employee>();
+	private List<Employee> managerList = new ArrayList<Employee>();
+	private List<Employee> juniorList = new ArrayList<Employee>();
+	private List<Employee> employeeListWithNoParking = new ArrayList<Employee>();
+	private List<Employee> employeeListWithParking = new ArrayList<Employee>();
+	
+	public void printAllEmployees() {
+		System.out.print("Employee's list: ");
+		for (Employee employee : employeeList)
+			System.out.print(employee.getName());
+	}
+}

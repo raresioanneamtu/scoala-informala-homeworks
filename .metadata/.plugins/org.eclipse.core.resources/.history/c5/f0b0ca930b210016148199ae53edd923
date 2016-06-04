@@ -1,0 +1,17 @@
+package siit.java.homeworks.shape;
+/**
+ * This class extends from RectangleSquare.
+ * 
+ * @author Rares
+ *
+ */
+
+public class Rectangle extends RectangleSquare {
+
+	@Override
+	public Object getName() {
+		return null;
+	}
+
+
+}

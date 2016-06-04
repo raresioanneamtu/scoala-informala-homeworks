@@ -1,0 +1,22 @@
+package siit.java.homeworks.parkingspace;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class EmployeeTest {
+
+	@Test
+	public void test() {
+		Employee employee = new Employee("Rares", "tester", 1, false);
+
+		if (employee instanceof Employee) {
+
+			assertEquals("Rares", employee.getName());
+			assertEquals("tester", employee.getPosition());
+			assertEquals(1, employee.getSeniority());
+			assertEquals(false, employee.isParking());
+		}
+	}
+
+}

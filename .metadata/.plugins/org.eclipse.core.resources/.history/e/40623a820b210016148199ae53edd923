@@ -1,0 +1,27 @@
+package siit.java.homeworks.shape;
+/**
+ * This is the interface for all the shapes.
+ * 
+ * @author Rares
+ *
+ */
+public interface Shape {
+	int length = 0;
+
+	/**
+	 * Method for area calculation.
+	 * 
+	 * @return double value representing the area calculated.
+	 */
+	double calculateArea();
+
+	/**
+	 * Method for perimeter calculation.
+	 * 
+	 * @return double value representing the perimeter calculated.
+	 */
+	double calculatePerimeter();
+
+	Object getName();
+
+}

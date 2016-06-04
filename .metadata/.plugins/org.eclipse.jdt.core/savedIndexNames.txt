@@ -1,2 +1,5 @@
 INDEX VERSION 1.127+D:\Scoala-informala-homeworks\.metadata\.plugins\org.eclipse.jdt.core
-2495881817.index
+849492937.index
+4142664333.index
+6219702.index
+274550510.index

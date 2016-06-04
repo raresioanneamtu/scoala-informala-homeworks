@@ -1,0 +1,59 @@
+package siit.java.homeworks.parkingspace;
+
+import java.util.ArrayList;
+
+public class CompanyManagementSystem {
+
+	private ArrayList<Employee> employeeList = new ArrayList<Employee>();
+	
+	public void add(Employee employee) throws WrongSeniorityException {
+		if (employee.getPosition() != "manager" && employee.getPosition() != "junior" && employee.getPosition() != "tester"){
+			throw new WrongSeniorityException("Seniority is not: " + employee.getName());
+		}
+		
+		else
+			employeeList.add(employee);
+
+	}
+	
+
+	public void printAllEmployees() {
+		System.out.print("Employee's list: ");
+		for (Employee employee : employeeList)
+			System.out.print(employee.getName());
+	}
+
+	public void printJuniors() {
+		for (Employee employee : junior) {
+			System.out.print("Junior" + employee.getName());
+		}
+	}
+
+	public void printTester() {
+		for (Employee employee : tester) {
+			System.out.print("Tester" + employee.getName());
+		}
+	}
+
+	public void printManager() {
+		for (Employee employee : manager) {
+			System.out.print("Manager" + employee.getName());
+		}
+	}
+
+	public void printEmployeesWithParking() {
+		System.out.print("Employee's with parking: ");
+		for (Employee employee : employeeListWithParking)
+			System.out.print(employee.getName());
+	}
+
+	public void printEmployeesWithNoParking() {
+		System.out.println("Employee's with no parking: ");
+		Collections.sort(employeeListWithNoParking, Employee.Seniority);
+		for (Employee employee : employeeListWithNoParking)
+			System.out.println(employee.getName() + ", years in company: " + employee.getSeniority());
+
+	
+	}
+}
+
