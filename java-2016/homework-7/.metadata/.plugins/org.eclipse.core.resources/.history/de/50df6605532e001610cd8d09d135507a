@@ -1,0 +1,8 @@
+package siit.java.homeworks.homework8;
+
+public class Snippet {
+	public static void main(String[] args) {
+		siit.java.homeworks.homework7;
+	}
+}
+

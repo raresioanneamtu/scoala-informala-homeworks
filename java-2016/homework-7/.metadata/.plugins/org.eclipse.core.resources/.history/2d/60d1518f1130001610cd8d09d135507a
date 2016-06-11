@@ -1,0 +1,8 @@
+package siit.java.homeworks.homework8;
+
+public class Ticket {
+	
+	private double price;
+	
+
+}

@@ -1,0 +1,22 @@
+package siit.java.homeworks.homework8;
+
+public class Ticket {
+
+	private int price;
+	private String category;
+
+	public Ticket(int price, String category) {
+		super();
+		this.price = price;
+		this.category = category;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+}

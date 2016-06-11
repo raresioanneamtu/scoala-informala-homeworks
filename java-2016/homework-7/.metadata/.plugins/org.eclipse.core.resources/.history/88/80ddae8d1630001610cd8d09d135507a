@@ -1,0 +1,9 @@
+package siit.java.homeworks.homework8;
+
+public class TicketManager {
+
+	public static void main(String[] args) {
+
+	}
+
+}

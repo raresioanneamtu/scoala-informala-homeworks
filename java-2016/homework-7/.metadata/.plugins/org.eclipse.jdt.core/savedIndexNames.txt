@@ -1,0 +1,7 @@
+INDEX VERSION 1.127+D:\JDE\Workspace\Scoala Informala\siit-homeworks\java-2016\homework-7\.metadata\.plugins\org.eclipse.jdt.core
+2629995601.index
+3671018501.index
+2226367248.index
+4142664333.index
+1990106312.index
+2495881817.index
