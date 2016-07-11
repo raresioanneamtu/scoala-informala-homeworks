@@ -11,6 +11,7 @@ import java.util.Date;
 
 public class TXTVoteFormater {
 
+	// TODO CODE REVIEW: This formatter is not configured!
 	private static final SimpleDateFormat DATE_FORMATER = new SimpleDateFormat();
 
 	public String toTXT(CitizenVote citizenVote) {
